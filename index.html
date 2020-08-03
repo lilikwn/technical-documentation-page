@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>HTML Form</header>
+      <ul>
+        <li><a href="#The_form_Element">The &#60;form&#62; Element</a></li>
+        <li><a href="#The_input_Element">The &#60;input&#62; Element</a></li>
+        <li><a href="#Text_Fields">Text Fields</a></li>
+        <li><a href="#The_label_Element">The &#60;label&#62; Element</a></li>
+        <li><a href="#Radio_Buttons">Radio Buttons</a></li>
+        <li><a href="#The_Submit_Button">The Submit Button</a></li>
+        <li><a href="#The_Action_Attribute">The Action Attribute</a></li>
+        <li><a href="#The_Target_Attribute">The Target Attribute</a></li>
+        <li><a href="#The_Method_Attribute">The Method Attribute</a></li>
+        <li><a href="#When_to_Use_GET">When to Use GET</a></li>
+        <li><a href="#When_to_Use_POST">When to Use POST</a></li>
+        <li><a href="#The_Name_Attribute">The Name Attribute</a></li>
+        <li><a href="">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="The_form_Element">
+        <header>The &#60;form&#62; Element</header>
+        <article>
+          <p>
+            The HTML <code class="code-inline">&#60;form></code> element defines
+            a form that is used to collect user input:
+          </p>
+          <code>&#60;form&#62; . form elements . &#60;/form&#62; </code>
+          <p>
+            An HTML form contains form elements.
+          </p>
+          <p>
+            Form elements are different types of input elements, like: text
+            fields, checkboxes, radio buttons, submit buttons, and more.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="The_input_Element">
+        <header>The &#60;input&#62; Element</header>
+        <article>
+          <p>
+            The <code class="code-inline">&#60;input></code> element is the most
+            important form element.
+          </p>
+          <p>
+            The <code class="code-inline">&#60;input></code> element is
+            displayed in several ways, depending on the type attribute.
+          </p>
+          <p>
+            Here are some examples:
+          </p>
+          <table>
+            <tr>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>&#60;input type="text"></td>
+              <td>Defines a single-line text input field</td>
+            </tr>
+            <tr>
+              <td>&#60;input type="radio"></td>
+              <td>
+                Defines a radio button (for selecting one of many choices)
+              </td>
+            </tr>
+            <tr>
+              <td>&#60;input type="submit"></td>
+              <td>Defines a submit button (for submitting the form)</td>
+            </tr>
+          </table>
+        </article>
+      </section>
+      <section class="main-section" id="Text_Fields">
+        <header>Text Fields</header>
+        <article>
+          <p>
+            <code class="code-inline">&#60;input type="text"></code>defines a
+            single-line input field for text input.
+          </p>
+          <code>
+            &#60;form &#60;label for="fname">First name:&#60;/label>&#60;br>
+            &#60;input type="text" id="fname" name="fname">&#60;br> &#60;label
+            for="lname">Last name:&#60;/label>&#60;br> &#60;input type="text"
+            id="lname" name="lname"> &#60;/form>
+          </code>
+          <p>
+            This is how it will look like in a browser:
+          </p>
+          <form>
+            <label for="fname">First name:</label>
+            <br />
+            <input type="text" id="fname" name="fname" />
+            <br />
+            <label for="lname">Last name:</label>
+            <br />
+            <input type="text" id="lname" name="lname" />
+          </form>
+        </article>
+      </section>
+      <section class="main-section" id="The_label_Element">
+        <header>The &#60;label&#62; Element</header>
+        <article>
+          <p>
+            Notice the use of the &#60;label> element in the example above.
+          </p>
+          <p>
+            The <code class="code-inline">&#60;label></code>tag defines a label
+            for many form elements.
+          </p>
+          <p>
+            The <code class="code-inline">&#60;label></code>element is useful
+            for screen-reader users, because the screen-reader will read out
+            loud the label when the user is focused on the input element.
+          </p>
+          <p>
+            The <code class="code-inline">&#60;label></code>element also help
+            users who have difficulty clicking on very small regions (such as
+            radio buttons or checkboxes) - because when the user clicks the text
+            within the <code class="code-inline">&#60;label></code>element, it
+            toggles the radio button/checkbox.
+          </p>
+          <p>
+            The for attribute of the
+            <code class="code-inline">&#60;label></code> tag should be equal to
+            the id attribute of the
+            <code class="code-inline">&#60;input></code>element to bind them
+            together.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Radio_Buttons">
+        <header>Radio Buttons</header>
+        <article>
+          <p>
+            <code class="code-inline">&#60;input type="radio"></code> defines a
+            radio button.
+          </p>
+          <p>
+            Radio buttons let a user select ONE of a limited number of choices.
+          </p>
+          <code>
+            &#60;form> &#60;input type="radio" id="male" name="gender"
+            value="male"> &#60;label for="male">Male&#60;/label>&#60;br>
+            &#60;input type="radio" id="female" name="gender" value="female">
+            &#60;label for="female">Female&#60;/label>&#60;br> &#60;input
+            type="radio" id="other" name="gender" value="other"> &#60;label
+            for="other">Other&#60;/label> &#60;/form>
+          </code>
+          <p>
+            This is how the HTML code above will be displayed in a browser:
+          </p>
+          <form>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label><br />
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label><br />
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">Other</label>
+          </form>
+        </article>
+      </section>
+      <section class="main-section" id="The_Submit_Button">
+        <header>The Submit Button</header>
+        <article>
+          <p>
+            <code class="code-inline">&#60;input type="submit"></code>defines a
+            button for submitting the form data to a form-handler.
+          </p>
+          <p>
+            The form-handler is typically a page on the server with a script for
+            processing input data.
+          </p>
+          <p>
+            The form-handler is specified in the form's action attribute.
+          </p>
+          <code>
+            &#60;form action="/action_page.php"> &#60;label for="fname">First
+            name:&#60;/label>&#60;br> &#60;input type="text" id="fname"
+            name="fname" value="John">&#60;br> &#60;label for="lname">Last
+            name:&#60;/label>&#60;br> &#60;input type="text" id="lname"
+            name="lname" value="Doe">&#60;br>&#60;br> &#60;input type="submit"
+            value="Submit"> &#60;/form>
+          </code>
+          <p>
+            This is how the HTML code above will be displayed in a browser:
+          </p>
+          <form action="/action_page.php">
+            <label for="fname">First name:</label><br />
+            <input type="text" id="fname" name="fname" value="John" /><br />
+            <label for="lname">Last name:</label><br />
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              value="Doe"
+            /><br /><br />
+            <input type="submit" value="Submit" />
+          </form>
+        </article>
+      </section>
+      <section class="main-section" id="The_Action_Attribute">
+        <header>The Action Attribute</header>
+        <article>
+          <p>
+            The action <code class="code-inline">attribute</code>defines the
+            action to be performed when the form is submitted.
+          </p>
+          <p>
+            Usually, the form data is sent to a page on the server when the user
+            clicks on the submit button.
+          </p>
+          <p>
+            In the example above, the form data is sent to a page on the server
+            called "/action_page.php". This page contains a server-side script
+            that handles the form data:
+          </p>
+          <code>
+            &#60;form action="/action_page.php">
+          </code>
+          <p>
+            If the <code class="code-inline">action</code>attribute is omitted,
+            the action is set to the current page.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="The_Target_Attribute">
+        <header>The Target Attribute</header>
+        <article>
+          <p>
+            The <code class="code-inline">target</code> attribute specifies if
+            the submitted result will open in a new browser tab, a frame, or in
+            the current window.
+          </p>
+          <p>
+            The default value is "<code class="code-inline">_self</code>" which
+            means the form will be submitted in the current window.
+          </p>
+          <p>
+            To make the form result open in a new browser tab, use the value
+            "<code class="code-inline">_blank</code>".
+          </p>
+          <code>&#60;form action="/action_page.php" target="_blank"></code>
+          <p>
+            Other legal values are "<code class="code-inline">_parent</code>",
+            "<code class="code-inline">_top</code>", or a name representing the
+            name of an iframe.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="The_Method_Attribute">
+        <header>The Method Attribute</header>
+        <article>
+          <p>
+            The <code class="code-inline">method</code>attribute specifies the
+            HTTP method (<strong>GET</strong> or <strong>POST</strong>) to be
+            used when submitting the form data.
+          </p>
+          <code>&#60;form action="/action_page.php" method="get"></code>
+          or:
+          <code>&#60;form action="/action_page.php" method="post"></code>
+        </article>
+      </section>
+      <section class="main-section" id="When_to_Use_GET">
+        <header>When to Use GET</header>
+        <article>
+          <p>
+            he default HTTP method when submitting form data is GET.
+          </p>
+          <p>
+            However, when GET is used, the form data will be
+            <strong>visible in the page's address field:</strong>
+          </p>
+          <code>/action_page.php?firstname=John&lastname=Doe</code>
+          <p>
+            <strong>Notes on GET:</strong>
+          </p>
+          <ul>
+            <li>Appends form-data into the URL in name/value pairs</li>
+            <li>The length of a URL is limited (2048 characters)</li>
+            <li>
+              Never use GET to send sensitive data! (will be visible in the URL)
+            </li>
+            <li>
+              Useful for form submissions where a user wants to bookmark the
+              result
+            </li>
+            <li>
+              GET is better for non-secure data, like query strings in Google
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="When_to_Use_POST">
+        <header>When to Use POST</header>
+        <article>
+          <p>
+            Always use POST if the form data contains sensitive or personal
+            information. The POST method does not display the form data in the
+            page address field.
+          </p>
+          <p>
+            <strong>Notes on POST:</strong>
+          </p>
+          <ul>
+            <li>
+              POST has no size limitations, and can be used to send large
+              amounts of data.
+            </li>
+            <li>Form submissions with POST cannot be bookmarked</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="The_Name_Attribute">
+        <header>The Name Attribute</header>
+        <article>
+          <p>
+            Each input field must have a
+            <code class="code-inline">name</code> attribute to be submitted.
+          </p>
+          <p>
+            If the <code class="code-inline">name</code> attribute is omitted,
+            the data of that input field will not be sent at all.
+          </p>
+          <code>
+            &#60;form action="/action_page.php"> &#60;label for="fname">First
+            name:&#60;/label>&#60;br> &#60;input type="text" id="fname"
+            value="John">&#60;br>&#60;br> &#60;input type="submit"
+            value="Submit"> &#60;/form>
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a
+                href="https://www.w3schools.com/html/html_forms.asp"
+                target="_blank"
+                >w3school</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
